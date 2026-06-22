@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public int highScore;
 
     // Keep track of canvases involved with the game
-    public GameObject menuPage, gamePage, scorePage, audioSettings, instructionsPage;
+    public GameObject menuPage, gamePage, scorePage, gameSettings, instructionsPage;
 
     public bool isPlaying = false, gameEnded = false, inMenu = true;
 
@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
         menuPage.SetActive(true);
         scorePage.SetActive(false);
         gamePage.SetActive(false);
-        audioSettings.SetActive(false);
+        gameSettings.SetActive(false);
         instructionsPage.SetActive(false);
     }
 
@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
     }
 
     // Opens the settings in the menu
-    public void OpenAudioSettings()
+    public void OpenGameSettings()
     {
         if (inMenu == false)
         {
@@ -82,11 +82,11 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0f;
         }
 
-        audioSettings.SetActive(true);
+        gameSettings.SetActive(true);
     }
 
     // Closes the settings in the menu
-    public void CloseAudioSettings()
+    public void CloseGameSettings()
     {
         if (inMenu == false)
         {
@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1f;
         }
 
-        audioSettings.SetActive(false);
+        gameSettings.SetActive(false);
     }
 
     // Opens the instructions page
