@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public int highScore;
 
     // Keep track of canvases involved with the game
-    public GameObject menuPage, gamePage, scorePage, gameSettings, instructionsPage;
+    public GameObject menuPage, scorePage, gameSettings, instructionsPage;
 
     public bool isPlaying = false, gameEnded = false, inMenu = true;
 
@@ -25,7 +25,6 @@ public class GameManager : MonoBehaviour
 
         menuPage.SetActive(true);
         scorePage.SetActive(false);
-        gamePage.SetActive(false);
         gameSettings.SetActive(false);
         instructionsPage.SetActive(false);
     }
@@ -61,16 +60,6 @@ public class GameManager : MonoBehaviour
         {
             highScoreText.text = "High-Score:\n" + highScore.ToString();
         }
-    }
-
-    // Begins the game
-    public void StartGame()
-    {
-        menuPage.SetActive(false);
-        gamePage.SetActive(true);
-
-        isPlaying = true;
-        inMenu = false;
     }
 
     // Opens the settings in the menu
