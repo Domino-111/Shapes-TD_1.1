@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
 
     public Tower.Shape myShape;
 
-    public AudioSource lastBreath;
+    //public AudioSource lastBreath;
 
     public Dijkstra pathFinder;
 
@@ -81,7 +81,7 @@ public class Enemy : MonoBehaviour
                 GameManager.game.score += 30;
             }
 
-            lastBreath.Play();
+            //lastBreath.Play();
             Destroy(gameObject);
         }
     }
