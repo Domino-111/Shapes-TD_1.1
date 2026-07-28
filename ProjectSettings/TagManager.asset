@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Tower
   - Level
+  - Start
+  - Goal
+  - Enemy
   layers:
   - Default
   - TransparentFX

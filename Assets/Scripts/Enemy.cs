@@ -1,4 +1,5 @@
 using MyPathfinding;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -35,8 +36,21 @@ public class Enemy : MonoBehaviour
 
         MyPathfinding.Node[] nodes = FindObjectsByType<MyPathfinding.Node>(FindObjectsSortMode.InstanceID);
 
-        startNode = nodes[0];
-        goalNode = nodes[10];
+        for (int i = 0; i < nodes.Length; i ++)
+        {
+            if (nodes[i].CompareTag("Start"))
+            {
+                startNode = nodes[i];
+            }
+        }
+
+        for (int i = 0; i < nodes.Length; i++)
+        {
+            if (nodes[i].CompareTag("Goal"))
+            {
+                goalNode = nodes[i];
+            }
+        }
     }
 
     void Start()
@@ -78,7 +92,7 @@ public class Enemy : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, path[point].transform.position, speed * Time.deltaTime);
 
         // Once poisiton is same or near the target node switch target to the next node in the list
-        if (Vector3.Distance(transform.position, path[point].transform.position) <= 0f)
+        if (Vector3.Distance(transform.position, path[point].transform.position) <= 0.00001f)
         {
             point += 1;
 

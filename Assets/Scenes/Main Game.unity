@@ -1741,6 +1741,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Node (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1615792713614864965, guid: 04600fa89a5263d4eb2fd4119209b9fb, type: 3}
+      propertyPath: m_TagString
+      value: Goal
+      objectReference: {fileID: 0}
     - target: {fileID: 7497377233550159873, guid: 04600fa89a5263d4eb2fd4119209b9fb, type: 3}
       propertyPath: Neighbours.Array.size
       value: 1
@@ -5393,7 +5397,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1241001106}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 916801037}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: PlayLevelOne
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1241001106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5483,6 +5499,10 @@ PrefabInstance:
     - target: {fileID: 1615792713614864965, guid: 04600fa89a5263d4eb2fd4119209b9fb, type: 3}
       propertyPath: m_Name
       value: Node (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615792713614864965, guid: 04600fa89a5263d4eb2fd4119209b9fb, type: 3}
+      propertyPath: m_TagString
+      value: Start
       objectReference: {fileID: 0}
     - target: {fileID: 7497377233550159873, guid: 04600fa89a5263d4eb2fd4119209b9fb, type: 3}
       propertyPath: Neighbours.Array.size
@@ -7868,9 +7888,8 @@ MonoBehaviour:
   highScoreText: {fileID: 0}
   score: 0
   highScore: 0
-  menuPage: {fileID: 0}
-  gamePage: {fileID: 0}
-  scorePage: {fileID: 0}
+  menuPage: {fileID: 1481703583}
+  scorePage: {fileID: 545041910}
   gameSettings: {fileID: 508724411}
   instructionsPage: {fileID: 0}
   isPlaying: 0
@@ -7889,7 +7908,7 @@ GameObject:
   - component: {fileID: 2023716310}
   - component: {fileID: 2023716309}
   m_Layer: 5
-  m_Name: Settings
+  m_Name: Settings Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8037,7 +8056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606191b843088304090386ba0e57804d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DataManager
-  gm: {fileID: 0}
+  gm: {fileID: 1991646095}
 --- !u!4 &2035310802
 Transform:
   m_ObjectHideFlags: 0
